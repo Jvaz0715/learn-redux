@@ -1,11 +1,3 @@
-// ACTION. Describes what it is you want to do
-// action increment
-
-/*
-   if you wanted to add a payload like lets say a product id or user id
-   than you would pass the params inside the parenthesis and another object key taht is the payload
-*/ 
-
 export const increment = (num = 1) => {
    return {
       type: 'INCREMENT',
@@ -34,3 +26,4 @@ export const divideBy = (num = 1) => {
       payload: num,
    }
 };
+
