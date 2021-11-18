@@ -21,8 +21,8 @@ function Products() {
          })
    }, [])
    return (
-      <div>
-         <ul style={{listStyleType: "none"}}>
+      <div style={{listStyleType: "none", display: "flex", justifyContent: "center", flexWrap: "wrap"}}>
+         <ul style={{listStyleType: "none", display: "flex", flexWrap: "wrap"}}>
             {productsList.map((product) =>{
                return (
                   <ProductCard 
