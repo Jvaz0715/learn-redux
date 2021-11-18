@@ -13,21 +13,6 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()//for use in chrome redux devtools;
   );
 
-// ACTION. Describes what it is you want to do
-// action increment
-const increment = () => {
-  return {
-    type: 'INCREMENT',
-  }
-};
-
-// action decrement
-const decrement = () => {
-  return {
-    type: 'DECREMENT',
-  }
-};
-
 // DISPATCH. Uses the action
 
 ReactDOM.render(
