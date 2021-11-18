@@ -3,8 +3,7 @@ import {
   Provider
 } from 'react-redux';
 import store from './redux';
-// import Counter from "./components/Counter";
-import ProductList from './components/ProductList';
+import Counter from "./components/Counter";
 
 import './App.css';
 
@@ -12,8 +11,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        {/* <Counter/> */}
-        <ProductList />
+        <Counter/>
       </div>
     </Provider>
   );

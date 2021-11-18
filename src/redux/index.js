@@ -10,9 +10,7 @@ const middleware = [thunk];
 const store = createStore(
    rootReducer,
    initialState, 
-   window.__REDUX_DEVTOOLS_EXTENSION__ 
-      && window.__REDUX_DEVTOOLS_EXTENSION__() 
-      && composeWithDevTools(applyMiddleware(...middleware)),
+   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 
 // DISPATCH. Uses the action
