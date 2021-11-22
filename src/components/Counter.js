@@ -9,6 +9,7 @@ import {
    decrement,
    multiplyBy,
    divideBy,
+   loggedIn
 } from "../actions";
 
 function Counter() {
@@ -23,11 +24,15 @@ function Counter() {
             <button onClick={() => dispatch(decrement())}>-</button>
             <button onClick={() => dispatch(multiplyBy(3))}>*3</button>
             <button onClick={() => dispatch(divideBy(2))}>/2</button>
-         {
-            isLogged
-               ? <h3> valuable information you should not see if not logged in</h3>
-               : ""
-         }
+            <br />
+         <div>
+            <button onClick={() => dispatch(loggedIn())}>Click to log in</button>
+            <div>
+               {
+                  isLogged && <h3> valuable information you should not see if not logged in</h3>
+               }
+            </div>
+         </div>
       </div>
    )
 };

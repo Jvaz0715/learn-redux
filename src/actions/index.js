@@ -26,3 +26,9 @@ export const divideBy = (num = 1) => {
       payload: num,
    }
 };
+
+export const loggedIn = () => {
+   return {
+      type: "SIGN_IN"
+   }
+}
