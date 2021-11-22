@@ -26,4 +26,3 @@ export const divideBy = (num = 1) => {
       payload: num,
    }
 };
-
