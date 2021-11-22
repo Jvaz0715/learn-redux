@@ -14,7 +14,7 @@ import {
 
 function Counter() {
    const counter = useSelector(state => state.counter)
-   const isLogged = useSelector(state => state.isLogged);
+   const isLogged = useSelector(state => state.logged);
 
    const dispatch = useDispatch();
    return (
@@ -26,10 +26,18 @@ function Counter() {
             <button onClick={() => dispatch(divideBy(2))}>/2</button>
             <br />
          <div>
-            <button onClick={() => dispatch(loggedIn())}>Click to log in</button>
+            <button onClick={() => dispatch(loggedIn())}>
+               {
+                  isLogged
+                     ? `Click to log in`
+                     : `Logout`
+               }
+            </button>
             <div>
                {
-                  isLogged && <h3> valuable information you should not see if not logged in</h3>
+                  isLogged 
+                     ? <span>Should only see this if you are logged in</span> 
+                     : <span>Log in to see information</span>
                }
             </div>
          </div>
